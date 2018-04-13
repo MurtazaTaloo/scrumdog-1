@@ -39,7 +39,7 @@ app.use('/api/v1', apiRouter);
  */
 const startExpress = () => {
   app.listen(process.env.PORT || 4040, () => {
-    logger.info(`Scrumdog running on ${process.env.PORT || 4040}`);
+    logger.info(`Scrumdog running on http://localhost:${process.env.PORT || 4040}/`);
   });
 };
 
