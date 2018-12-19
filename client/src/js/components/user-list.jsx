@@ -37,7 +37,7 @@ class UserListComponent extends Component {
     return (
       <div className="user-list">
         <header>
-          <h3>Add someone to this standup:</h3>
+          <h3>Click name to participate :</h3>
         </header>
         <div className="users">
           {users}

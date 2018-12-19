@@ -55,7 +55,7 @@
   },
   "scripts": {
     "build": "pack -r -m -s client/src -m js/index.js -d client/build -b app",
-    "dev": "nodemon server/index --config .nodemon.json",
+    "dev": "nodemon server/index --watch src --watch server --config .nodemon.json",
     "lint": "eslint . --ext js,jsx",
     "migrate": "sequelize db:migrate",
     "migrate:undo": "sequelize db:migrate:undo",
