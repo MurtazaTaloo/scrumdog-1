@@ -1,0 +1,11 @@
+{
+  "sessionSecret": "Use a useful secret",
+  "db": {
+    "host": "scrumdog.sqlite",
+    "database": "scrumdog",
+    "username": null,
+    "password": null,
+    "dialect": "sqlite"
+  },
+  "authEnabled": false
+}

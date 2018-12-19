@@ -74,7 +74,7 @@ class TeamListItem extends Component {
           <a
             onClick={this.toggleShow}
             className="list-table__list__item__btn-edit"
-          >Edit / dadd users</a>
+          >Edit / add users</a>
         </small>
       </header>
 
