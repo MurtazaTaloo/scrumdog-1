@@ -1,7 +1,7 @@
 FROM node:carbon
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -9,13 +9,20 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
+
+RUN npm --depth 9999 update
+RUN npm rebuild node-sass
+
 # If you are building your code for production
 # RUN npm install --only=production
-RUN npm run build
 COPY config.json.vanilla config.json
 
 # Bundle app source
 COPY . .
 
+
+RUN npm run build
+
 EXPOSE 4040
+
 CMD [ "npm", "start" ]
